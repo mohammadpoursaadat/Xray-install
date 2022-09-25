@@ -360,6 +360,7 @@ get_current_version() {
 get_latest_version() {
   # Get Xray latest release version number
   local tmp_file
+  echo "get Latest"
   tmp_file="$(mktemp)"
   if ! curl -x "${PROXY}" -sS -H "Accept: application/vnd.github.v3+json" -o "$tmp_file" api.github.com/repos/XTLS/Xray-core/releases/latest'; then
     "rm" "$tmp_file"
