@@ -780,6 +780,7 @@ show_help() {
 }
 
 main() {
+  echo "start"
   check_if_running_as_root
   identify_the_operating_system_and_architecture
   judgment_parameters "$@"
